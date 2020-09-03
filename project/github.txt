@@ -1,0 +1,26 @@
+github 협업 가이드라인
+
+1. git init
+
+2. git remote add origin '공유받은 github주소'
+
+3. git pull origin master    --- master branch의 파일 당겨오는 명령어
+
+4. git branch '자신의 브랜치명'   --- github branch생성하는 명령어 (자신의 브랜치 생성하고, 여기서 작업하기)
+
+5. git branch   --- 작업 전, 꼭 자신의 브랜치인지 확인하기!
+
+6. git add .   --- 자신의 브랜치에서 실행, 작업한 파일 add하기
+
+7. git commit -m '메세지'   --- 자신의 브랜치에서 실행, 작업한 파일 commit 하기
+
+8. git push origin '자신의 브랜치명'   --- 자신의 브랜치에 작업한 파일 올리기
+
+9. github repository접속 -> 자신의 브랜치 선택 -> master로 pull requests하기
+
+
+
+※ commit메세지와 pull requests메세지 다른 사람이 작업내역 알아볼 수 있게 작성하기
+※ 자신의 작업 내역 로컬에 저장 꼭 해 놓기
+※ 다른 사람과 하나의 작업물로 함께 작업하는 경우, 작업 시작 전 master에서 pull 하고, 작업이 끝나면 작업 내용 명시해서 master에  push 해 놓기
+
