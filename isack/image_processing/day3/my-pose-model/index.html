@@ -9,6 +9,7 @@
     <div>Teachable Machine Pose Model</div>
 
 <button type="button" onclick="init()">Start</button> <!--버튼을누르면 init함수실행-->
+<button type="button" onclick="reset()">pause</button> <!--버튼을누르면 reset함수실행-->
 <div><canvas id="canvas"></canvas></div>
 <div id="label-container"></div>
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
@@ -92,6 +93,15 @@
             }
         }
     }
+
+    async function pause() {
+        await webcam.pause();
+
+        // webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
+        // await webcam.setup(); // request access to the webcam
+        // await webcam.play();
+    }
+
 </script>
 
 </body>
