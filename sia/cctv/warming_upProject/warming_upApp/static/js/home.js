@@ -6,10 +6,13 @@ const URL = "https://teachablemachine.withgoogle.com/models/BDo2e3hGX/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 
 var start = 0
+var count = 0
 async function init() {
     if (start == 0){
         document.getElementById("fake_canvas").style.opacity = 0
         $("#canvas").fadeIn(500);
+
+        count = 0
 
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
@@ -60,7 +63,7 @@ async function loop(timestamp) {
 }
 
 const maxNumber = Math.pow(10, 1000);
-var count = 0
+
 async function predict() {
     // Prediction #1: run input through posenet
     // estimatePose can take in an image, video or canvas html element
@@ -82,14 +85,17 @@ async function predict() {
         }
 
         if (prediction[i].className == 'Class 2' && prediction[i].probability.toFixed(2) > 0.9){
-            count += 1
-            console.log(count)
+            if (document.getElementById("fake_canvas").style.opacity == 0){
+                count += 1
+                console.log(count)
+            }
         }
         else if (prediction[i].className == 'Class 2' && prediction[i].probability.toFixed(2) < 0.9){
             count = 0
+            console.log(count)
         }
 
-        if (count % 50 == 0 && count != 0){
+        if (count == 50){
             if (count < maxNumber){                    
                 var li = document.createElement("li");
                 li.setAttribute("id","notification");
