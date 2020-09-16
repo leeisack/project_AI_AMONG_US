@@ -34,12 +34,14 @@
     // the link to your model provided by Teachable Machine export panel
     const URL = "https://teachablemachine.withgoogle.com/models/BDo2e3hGX/";
     let model, webcam, ctx, labelContainer, maxPredictions;
-
+    const maxNumber = Infinity;
+    let count = 0
     var start = 0
+    let fake_canvas_opacity = document.getElementById("fake_canvas").style.opacity
     async function init() {
         console.log(start)
         if (start == 0){
-            document.getElementById("fake_canvas").style.opacity = 0
+            fake_canvas_opacity = 0
             $("#canvas").fadeIn(500);
             const modelURL = URL + "model.json";
             const metadataURL = URL + "metadata.json";
@@ -73,7 +75,7 @@
             webcam.stop();          
 
             $("#canvas").fadeOut(500);
-            document.getElementById("fake_canvas").style.opacity = 1
+            fake_canvas_opacity = 1
             start = 0;
         }
         
@@ -89,8 +91,7 @@
         test = window.requestAnimationFrame(loop);
     }
 
-    const maxNumber = Math.pow(10, 1000);
-    var count = 0
+    
     async function predict() {
         // Prediction #1: run input through posenet
         // estimatePose can take in an image, video or canvas html element
@@ -102,6 +103,10 @@
             // const classPrediction =
             //     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
             // labelContainer.childNodes[i].innerHTML = classPrediction;  
+          
+          //------------------------------------------------------
+          
+          
             var date = new Date();
             var m = ""
             if (date.getHours > 11){                    
@@ -112,22 +117,25 @@
             }
 
             if (prediction[i].className == 'Class 2' && prediction[i].probability.toFixed(2) > 0.9){
+                if (fake_canvas_opacity == 0){
                 count += 1
                 console.log(count)
+                    if (count % 50 == 0 && count != 0){
+                    if (count < maxNumber){                    
+                        var li = document.createElement("li");
+                        li.setAttribute("id","notification");
+                        li.innerHTML = date.getHours() + ":" + date.getMinutes() + " " + m + '<br/>' + "비정상적인 접근 발생";
+                        labelContainer.append(li);
+                        count += maxNumber
+                    }
+                    }
+            }
             }
             else if (prediction[i].className == 'Class 2' && prediction[i].probability.toFixed(2) < 0.9){
                 count = 0
             }
 
-            if (count % 50 == 0 && count != 0){
-                if (count < maxNumber){                    
-                    var li = document.createElement("li");
-                    li.setAttribute("id","notification");
-                    li.innerHTML = date.getHours() + ":" + date.getMinutes() + " " + m + '<br/>' + "비정상적인 접근 발생";
-                    labelContainer.append(li);
-                    count += maxNumber
-                }
-            }
+            
             
             
         }
