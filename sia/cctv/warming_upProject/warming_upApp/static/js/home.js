@@ -7,10 +7,10 @@ let model, webcam, ctx, labelContainer, maxPredictions;
 
 var start = 0
 async function init() {
-    console.log(start)
     if (start == 0){
         document.getElementById("fake_canvas").style.opacity = 0
         $("#canvas").fadeIn(500);
+
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
 
@@ -98,8 +98,6 @@ async function predict() {
                 count += maxNumber
             }
         }
-        
-        
     }
 
     // finally draw the poses
