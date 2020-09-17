@@ -4,7 +4,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/sign.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}" />
     <script type="text/javascript" src="{% static 'js/sign.js' %}"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 <body>
     <a href = "http://127.0.0.1:8000" class = "top_left">
         <img src="/static/img/cctv.png" id = "character" alt="character">
-        <img src="/static/img/amongus3.png" id = "logo" alt="logo">
+        <img src="/static/img/amongus.png" id = "logo" alt="logo">
     </a>
     
     <div class = "main">
@@ -52,7 +52,7 @@
                     <td><input type="email" name="email" required></td>
                 </tr>
             </table>
-            <div id = "submit"><input type="submit"></div>
+            <div id = "submit"><input type="image" src="/static/img/report.png" name="submit" value="submit" align="absmiddle"></div>
         </form>
     </div>
 </body>

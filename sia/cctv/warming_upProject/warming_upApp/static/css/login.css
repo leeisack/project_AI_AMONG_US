@@ -1,6 +1,6 @@
 body{
     font-family: 'Nanum Gothic Coding', monospace;
-    background-color: #B6DEE7;
+    background-image: url(/static/img/background.jpg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,12 +24,11 @@ body{
 }
 .main{
     width: 40%;
-    height: 650px;
-    background-color: white;
-    margin-top: 5%;
+    height: 500px;
+    margin-top: 12%;
 }
 table{
-    width: 70%;
+    width: 60%;
     margin: auto;
     margin-top: 15%;
 }
@@ -38,26 +37,28 @@ tr{
 }
 tr > td:nth-child(1){
     width: 30%;
+    color: white
 }
 input{
     width: 100%;
     height: 20px;
+    background-color: transparent;
     border: none;
-    border-bottom: 3px solid #6EA8C9;
+    border-bottom: 3px solid white;
+    color: white;
+}
+input:focus{
+    outline-width:0px;
 }
 #submit{
     text-align: center;
     margin-top: 7%;
 }
-input[type = submit]{
-    width: 30%;
+input[type=submit]{
+    width: 25%;
     height: 30px;
-    border: none;
-    background-color: #6EA8C9;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 15px;
     color: white;
-}
-.alert{
-    height: 20px;
-    font-size: 10px;
-    color: red;
 }
