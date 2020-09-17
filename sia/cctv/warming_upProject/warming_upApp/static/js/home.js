@@ -7,6 +7,7 @@ let model, webcam, ctx, labelContainer, maxPredictions;
 
 var start = 0
 var count = 0
+
 async function init() {
     if (start == 0){
         document.getElementById("fake_canvas").style.opacity = 0
@@ -24,7 +25,7 @@ async function init() {
         maxPredictions = model.getTotalClasses();
 
         // Convenience function to setup a webcam
-        const size = 200;
+        const size = 1000;
         const flip = true; // whether to flip the webcam
         webcam = new tmPose.Webcam(size, size, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
@@ -40,6 +41,7 @@ async function init() {
         //     labelContainer.appendChild(document.createElement("div"));
         // }
         start = 1;
+        document.getElementById("onoff").innerHTML = "OFF";
     }
     else{
         await webcam.pause();
@@ -48,6 +50,7 @@ async function init() {
         $("#canvas").fadeOut(500);
         document.getElementById("fake_canvas").style.opacity = 1
         start = 0;
+        document.getElementById("onoff").innerHTML = "ON";
     }
     
 }

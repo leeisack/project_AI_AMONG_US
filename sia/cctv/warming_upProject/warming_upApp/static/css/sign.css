@@ -1,0 +1,63 @@
+body{
+    font-family: 'Nanum Gothic Coding', monospace;
+    background-color: #B6DEE7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top_left{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+#character{
+    width: 100px;
+    height: 95px;
+    position: absolute;
+}
+#logo{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    margin-left: 76px;
+    margin-top: 33px;
+}
+.main{
+    width: 40%;
+    height: 650px;
+    background-color: white;
+    margin-top: 5%;
+}
+table{
+    width: 70%;
+    margin: auto;
+    margin-top: 15%;
+}
+tr{
+    height: 50px;
+}
+tr > td:nth-child(1){
+    width: 30%;
+}
+input{
+    width: 100%;
+    height: 20px;
+    border: none;
+    border-bottom: 3px solid #6EA8C9;
+}
+#submit{
+    text-align: center;
+    margin-top: 7%;
+}
+input[type = submit]{
+    width: 30%;
+    height: 30px;
+    border: none;
+    background-color: #6EA8C9;
+    color: white;
+}
+.alert{
+    height: 20px;
+    font-size: 10px;
+    color: red;
+}

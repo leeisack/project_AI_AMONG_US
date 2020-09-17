@@ -5,9 +5,47 @@ body{
 *:focus { 
     outline:none; 
 }
+.top{
+    width: 95%;
+}
+.top_left{
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    float: left;
+    font-size: 23px;
+}
+#character{
+    width: 100px;
+    height: 95px;
+    position: absolute;
+}
+#logo{
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    margin-left: 76px;
+    margin-top: 33px;
+}
+.top_right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.sign{
+    font-family: 'Amatic SC', cursive;
+    color: #2B78A2;
+    width: 80px;
+    height: 30px;
+    font-size: 25px;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    margin: 2% 0 0 0;
+}
 .main{
     display: flex;
-    flex-direction: row;
+    margin: 1% 10% 0 10%
 }
 .left{
     display: flex;
@@ -25,19 +63,22 @@ body{
     margin: 1%;
     position: relative;
 }
+
 .btn{
     display: flex;
     flex-direction: row;
     margin: 2%;
 }
 button{
+    font-family: 'Amatic SC', cursive;
     width: 100%;
     height: 150px;
-    background-color: #fCD9DD;
-    font-size: 30px;
+    background-color: #6EA8c9;
+    font-size: 55px;
     border: none;
     border-radius: 15px;
     margin: 1%;
+    color: white;
 }
 #fake_canvas{
     background-color: white;
@@ -67,11 +108,12 @@ button{
 }
 #notification{
     list-style: none;
-    background-color: #F2CDAF;
+    background-color: #2B78A2;
     border-radius: 10px;
     padding: 8px 12px 8px 12px;
     line-height: 1.5;
     font-size: 13px;
     text-align: left;
     margin: 1%;
+    color: white;
 }
