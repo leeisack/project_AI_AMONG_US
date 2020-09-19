@@ -17,7 +17,7 @@
 <body>
 <div class = "top">
     <a href = "#" class = "top_left">
-        <img src="/static/img/cctv.png" id = "character" alt="character">
+        <img src="/static/img/cctv.png" id = "character" alt="character"> 
         <img src="/static/img/amongus.png" id = "logo" alt="logo">
     </a>
     <div class = "top_right">
@@ -27,18 +27,20 @@
 </div>
 
 <div class="main">
-    <div class="left">
-        <div class = "btn">
-            <button type="button" onclick="init()" id = "onoff">ON</button>
+    <div class = "container">
+        <div class="left">
+            <div class = "btn">
+                <button type="button" onclick="init()" id = "onoff">ON</button>
+            </div>
+            <ul id="label-container">notification
+            </ul>
         </div>
-        <ul id="label-container">notification
-            <li id = "notification">test</li>
-        </ul>
-    </div>
-    <div class="right">
-        <canvas id="fake_canvas"></canvas>
-        <canvas id="canvas"></canvas>
+        <div class="right">
+            <canvas id="fake_canvas"></canvas>
+            <canvas id="canvas"></canvas>
+        </div>
     </div>
 </div>
+<div id = "team">kimsia / shinhyesu / Leeisack / janghayoung</div>
 </body>
 </html>

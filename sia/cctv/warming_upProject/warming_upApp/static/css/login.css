@@ -1,6 +1,8 @@
 body{
     font-family: 'Nanum Gothic Coding', monospace;
     background-image: url(/static/img/background.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,7 +57,7 @@ input:focus{
     margin-top: 7%;
 }
 input[type=submit]{
-    width: 25%;
+    width: 20%;
     height: 30px;
     background-color: transparent;
     border: 2px solid white;

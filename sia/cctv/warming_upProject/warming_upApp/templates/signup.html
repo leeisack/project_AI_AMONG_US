@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}" />
     <script type="text/javascript" src="{% static 'js/sign.js' %}"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js" ></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
     <title>Signup</title>
 </head>
@@ -15,17 +15,18 @@
         <img src="/static/img/cctv.png" id = "character" alt="character">
         <img src="/static/img/amongus.png" id = "logo" alt="logo">
     </a>
-    
+
     <div class = "main">
-        <form method = "POST">
+        <form action="{%url 'signup' %}" method = "POST">
+            {% csrf_token %}
             <table>
                 <tr>
                     <td>이름</td>
-                    <td><input type="text" name="name" required></td>
+                    <td><input type="text" name="name" required autocomplete="off"></td>
                 </tr>
                 <tr>
                     <td>아이디</td>
-                    <td><input type="text" name="id" required></td>
+                    <td><input type="text" name="id" id = "id" required autocomplete="off" onchange="id_check()"></td>
                 </tr>
                 <tr id = "id_msg" class = "alert" style= "display:none">
                     <td></td>
@@ -45,11 +46,11 @@
                 </tr>
                 <tr>
                     <td>전화번호</td>
-                    <td><input type="tel" name="phone" required></td>
+                    <td><input type="tel" name="phone" required autocomplete="off"></td>
                 </tr>
                 <tr>
                     <td>이메일</td>
-                    <td><input type="email" name="email" required></td>
+                    <td><input type="email" name="email" required autocomplete="off"></td>
                 </tr>
             </table>
             <div id = "submit"><input type="image" src="/static/img/report.png" name="submit" value="submit" align="absmiddle"></div>
