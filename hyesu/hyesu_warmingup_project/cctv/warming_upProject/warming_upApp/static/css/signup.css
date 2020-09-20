@@ -1,0 +1,68 @@
+body{
+    font-family: 'Nanum Gothic Coding', monospace;
+    background-image: url(/static/img/background.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.top_left{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+#character{
+    width: 100px;
+    height: 95px;
+    position: absolute;
+}
+#logo{
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    margin-left: 76px;
+    margin-top: 33px;
+}
+.main{
+    width: 40%;
+    height: 650px;
+    margin-top: 5%;
+}
+table{
+    width: 70%;
+    margin: auto;
+    margin-top: 15%;
+}
+tr{
+    height: 50px;
+}
+tr > td:nth-child(1){
+    width: 30%;
+    color: white
+}
+input{
+    width: 100%;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    color: white;
+}
+input:focus{
+    outline-width:0px;
+}
+#submit{
+    text-align: center;
+    margin-top: 7%;
+}
+input[type=image]{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100px;
+    border: none;;
+}
+.alert{
+    height: 20px;
+    font-size: 10px;
+    color: red;
+}

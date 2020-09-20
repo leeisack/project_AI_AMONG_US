@@ -1,1 +1,14 @@
-ddddd
+Tensorflow Object Detection API 사용하기
+
+https://musma.github.io/2019/02/15/tensorflow-on-windows.html
+https://jech-jose.tistory.com/113?category=1020376
+https://github.com/tensorflow/models 다운로드 링크
+https://nitr0.tistory.com/266 사용 코드
+
+https://github.com/wfapgm36/Tensorflow-Object-Detection-API-Tutorial-train-optimize
+https://shinwoo-informationsecurity.tistory.com/31 직접 수집한 데이터셋으로 학습시키기
+
+import tensorflow.compat.v1 as tf 
+tf.disable_v2_behavior()
+
+https://deep-eye.tistory.com/6
