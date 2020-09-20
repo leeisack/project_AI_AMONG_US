@@ -8,6 +8,9 @@ import json
 def home(request):
     return render(request, 'home.html')
 
+def manual(request):
+    return render(request, 'manual.html')
+
 def signup(request):
     # if request.method == 'POST':
     #     user_id = request.POST['id']

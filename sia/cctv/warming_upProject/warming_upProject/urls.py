@@ -20,6 +20,7 @@ from warming_upApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('manual/', views.manual, name='manual'),
     path('signup/', views.signup, name='signup'),
     path('login/', views.login, name='login'),
     path('idcheck/', views.id_check, name='idcheck'),
