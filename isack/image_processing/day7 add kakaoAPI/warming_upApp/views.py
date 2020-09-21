@@ -36,9 +36,9 @@ def kakao(request):
     talk_url = "https://kapi.kakao.com/v2/api/talk/memo/send"
 
     # 사용자 토큰
-    token = '098b3361420f6ad3b6c17afd67800814'
+    token = '이이삭한테 물어보세유'
     header = {
-        "Authorization": "Bearer GgYQtrbNg1VxdTRt30NqdSDZoUWE7GNgyhNKBAopb1UAAAF0ry7VrQ".format(
+        "Authorization": "Bearer 띄어쓰기한칸일부러있는거토큰이이삭한테물어보기".format(
             token=token
         )
     }
