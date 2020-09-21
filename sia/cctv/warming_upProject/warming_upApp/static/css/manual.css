@@ -43,6 +43,16 @@ input[type=button]{
 #move3{
     animation: rotate_image3 5s linear infinite;
 }
+#move4{
+    animation: rotate_image4 15s linear infinite;
+}
+#move5{
+    animation: rotate_image5 20s linear infinite;
+}
+#move6{
+    width: 80px;
+    animation: rotate_image6 5s linear infinite;
+}
 @keyframes rotate_image1{
     0% {
         left: -100px;
@@ -67,8 +77,8 @@ input[type=button]{
         top: 600px;
     }
     100%{
-        left: 94%;
-        top: 400px;
+        left: 84%;
+        top: 600px;
         transform: rotate(360deg);
     }
 }
@@ -80,6 +90,39 @@ input[type=button]{
 	100% {
         left: 85%;
         top: 300px;
+    	transform: rotate(360deg);
+    }
+}
+@keyframes rotate_image4{
+    0% {
+        left: 85%;
+        top: 100px;
+    }
+	100% {
+        left: 65%;
+        top: 700px;
+    	transform: rotate(360deg);
+    }
+}
+@keyframes rotate_image5{
+    0% {
+        left: 85%;
+        top: 600px;
+    }
+	100% {
+        left: 15%;
+        top: 100px;
+    	transform: rotate(360deg);
+    }
+}
+@keyframes rotate_image6{
+    0% {
+        left: 15%;
+        top: 500px;
+    }
+	100% {
+        left: 15%;
+        top: 500px;
     	transform: rotate(360deg);
     }
 }
