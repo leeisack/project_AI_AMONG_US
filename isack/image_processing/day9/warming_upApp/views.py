@@ -68,8 +68,8 @@ def email(request):
     # saveas = 'screenshot.png'
     # img.save(saveas)
     # 발송 이메일
-    fromaddress = 'sackda24@likelion.org'
-    pw = '96952425'
+    fromaddress = 'email'
+    pw = 'pw'
 
     #수신 이메일
     toaddress = 'sackda24@naver.com'
