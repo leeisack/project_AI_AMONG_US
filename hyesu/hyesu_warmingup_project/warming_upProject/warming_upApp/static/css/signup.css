@@ -7,27 +7,57 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.top_left{
+.top{
     width: 100%;
-    display: flex;
+    display:flex;
     justify-content: flex-start;
+}
+.top_left{
+    display: flex;  
+    justify-content: flex-start;
+    float: left;
+	align-items:center;
+    font-size: 23px;
+}
+.character{
+    display: flex;
+    float: left;
 }
 #character{
     width: 100px;
     height: 95px;
-    position: absolute;
+    /* position: absolute; */
+}
+.logo{
+    display: flex;
+    float: left;
+    padding-top:20px;
+    margin-left:-20px;
 }
 #logo{
-    width: 150px;
     height: 50px;
-    position: absolute;
+    width: 150px;
+    /* position: absolute;
     margin-left: 76px;
-    margin-top: 33px;
+    margin-top: 33px; */
 }
 .main{
-    width: 40%;
-    height: 650px;
-    margin-top: 5%;
+    width: 100%;
+    display : flex;
+    justify-content: center;
+}
+
+.container{
+    display :flex;
+    justify-content: center;
+    width:60%;
+}
+.form {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    width:100%
 }
 table{
     width: 70%;
@@ -39,6 +69,11 @@ tr{
 }
 tr > td:nth-child(1){
     width: 30%;
+    color: white
+}
+
+tr > td:nth-child(2){
+    width: 70%;
     color: white
 }
 input{
