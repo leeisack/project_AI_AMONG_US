@@ -16,13 +16,17 @@
 </head>
 <body>
 <div class = "top">
-    <a href = "#" class = "top_left">
-        <img src="/static/img/cctv.png" id = "character" alt="character"> 
-        <img src="/static/img/amongus.png" id = "logo" alt="logo">
-    </a>
+    <div class ="top_left">
+        <div class="character">
+            <img src="/static/img/cctv.png" id = "character" alt="character">
+        </div>
+        <div class="logo">
+            <a href = "#"><img src="/static/img/amongus.png" id = "logo" alt="logo"></a>
+        </div>
+    </div>
     <div class = "top_right">
         <a href="/login/" class="sign">LOGIN</a>
-        <a href="/signup/" class="sign">SIGNUP</a>
+        {% comment %} <a href="/signup/" class="sign">SIGNUP</a> {% endcomment %}
     </div>
 </div>
 
@@ -32,23 +36,17 @@
             <div class = "btn">
                 <button type="button" onclick="init()" id = "onoff">ON</button>
             </div>
-            <ul id="label-container">notification
-            </ul>
+            <div class="scroll">
+                <ul id="label-container">notification
+                </ul>
+            </div>
         </div>
         <div class="right">
             <canvas id="fake_canvas">
             </canvas>
             <canvas id="canvas"></canvas>
         </div>
-<<<<<<< HEAD
-        <ul id="label-container">notification
-        </ul>
-    </div>
-    <div class="right">
-        <canvas id="fake_canvas"></canvas>
-        <canvas id="canvas"></canvas>
-=======
->>>>>>> c6a45f8615745ad997454f1b9e4bad52ba7ddcf1
+
     </div>
 </div>
 <div id = "team">kimsia / shinhyesu / Leeisack / janghayoung</div>

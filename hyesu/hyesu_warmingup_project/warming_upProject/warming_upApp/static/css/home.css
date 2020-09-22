@@ -5,33 +5,46 @@ body{
 *:focus { 
     outline:none; 
 }
+
+
 .top{
-    width: 95%;
-    margin-bottom: 3%;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
 }
 .top_left{
-    width: 20%;
-    display: flex;
+    display: flex;  
     justify-content: flex-start;
     float: left;
+	align-items:center;
     font-size: 23px;
+}
+.character{
+    display: flex;
+    float: left;
 }
 #character{
     width: 100px;
     height: 95px;
-    position: absolute;
+    /* position: absolute; */
+}
+.logo{
+    display: flex;
+    float: left;
+    padding-top:20px;
+    margin-left:-20px;
 }
 #logo{
     height: 50px;
     width: 150px;
-    position: absolute;
+    /* position: absolute;
     margin-left: 76px;
-    margin-top: 33px;
+    margin-top: 33px; */
 }
 .top_right{
-    width: 100%;
     display: flex;
-    justify-content: flex-end;
+    float: right;
+    align-items: center;
 }
 .sign{
     font-family: 'Amatic SC', cursive;
@@ -50,6 +63,7 @@ body{
 }
 .container{
     width: 60%;
+    height: 100%;
     display: flex;
 }
 .left{
@@ -57,6 +71,8 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     width: 30%;
+    height:0;
+    padding-bottom: 70%;
     margin: 1%;
     margin-right: 0;
     border-radius: 15px;
@@ -64,7 +80,6 @@ body{
 }
 .right{
     width: 70%;
-    height: 600px;
     margin: 1%;
     position: relative;
 }
@@ -74,10 +89,19 @@ body{
     flex-direction: row;
     margin: 2%;
 }
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    overflow-y:scroll;
+    flex:70%;
+}
+
 button{
     font-family: 'Amatic SC', cursive;
     width: 100%;
-    height: 150px;
+    height: 100%;
     background-color:rgb(70, 142, 201);
     font-size: 55px;
     border: none;
@@ -89,7 +113,7 @@ button{
     background-color: white;
     border-radius: 15px;
     width: 100%;
-    height: 600px;
+    height: 100%;
     position: absolute;
     z-index: 2;
 }
@@ -97,7 +121,7 @@ button{
     background-color: white;
     border-radius: 15px;
     width: 100%;
-    height: 600px;
+    height: 100%;
     position: relative;
     z-index: 1;
 }
@@ -105,12 +129,14 @@ button{
     display: flex;
     flex-direction: column;
     justify-items: center;
-    height: 100%;
     margin: 1%;
+    width:100%;
     text-align: center;
+    /* overflow:scroll; */
     line-height: 2;
     padding-left: 0;
 }
+
 #notification{
     list-style: none;
     background-color:rgb(57, 104, 183);

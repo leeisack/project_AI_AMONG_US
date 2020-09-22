@@ -11,50 +11,58 @@
     <title>Signup</title>
 </head>
 <body>
-    <a href = "http://127.0.0.1:8000" class = "top_left">
-        <img src="/static/img/cctv.png" id = "character" alt="character">
-        <img src="/static/img/amongus.png" id = "logo" alt="logo">
-    </a>
+    <div class = "top">
+        <div class ="top_left">
+            <div class="character">
+                <img src="/static/img/cctv.png" id = "character" alt="character">
+            </div>
+            <div class="logo">
+                <a href = "http://127.0.0.1:8000/"><img src="/static/img/amongus.png" id = "logo" alt="logo"></a>
+            </div>
+        </div>
+    </div>
 
     <div class = "main">
-        <form action="{%url 'signup' %}" method = "POST">
-            {% csrf_token %}
-            <table>
-                <tr>
-                    <td>이름</td>
-                    <td><input type="text" name="name" required autocomplete="off"></td>
-                </tr>
-                <tr>
-                    <td>아이디</td>
-                    <td><input type="text" name="id" id = "id" required autocomplete="off" onchange="id_check()"></td>
-                </tr>
-                <tr id = "id_msg" class = "alert" style= "display:none">
-                    <td></td>
-                    <td>중복된 아이디가 존재합니다.</td>
-                </tr>
-                <tr>
-                    <td>비밀번호</td>
-                    <td><input type="password" name="pwd" id = "pwd" required></td>
-                </tr>
-                <tr>
-                    <td>비밀번호 확인</td>
-                    <td><input type="password" name="pwd_chk" id = "pwd_chk" onchange="password_check()" required></td>
-                </tr>
-                <tr id = "pwd_msg" class = "alert" style= "display:none">
-                    <td></td>
-                    <td>비밀번호가 일치하지 않습니다.</td>
-                </tr>
-                <tr>
-                    <td>전화번호</td>
-                    <td><input type="tel" name="phone" required autocomplete="off"></td>
-                </tr>
-                <tr>
-                    <td>이메일</td>
-                    <td><input type="email" name="email" required autocomplete="off"></td>
-                </tr>
-            </table>
-            <div id = "submit"><input type="image" src="/static/img/report.png" name="submit" value="submit" align="absmiddle"></div>
-        </form>
+        <div class = "container">
+            <form action="{%url 'signup' %}" method = "POST" class="form">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td>이름</td>
+                        <td><input type="text" name="name" required autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>아이디</td>
+                        <td><input type="text" name="id" id = "id" required autocomplete="off" onchange="id_check()"></td>
+                    </tr>
+                    <tr id = "id_msg" class = "alert" style= "display:none">
+                        <td></td>
+                        <td>중복된 아이디가 존재합니다.</td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td><input type="password" name="pwd" id = "pwd" required></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호 확인</td>
+                        <td><input type="password" name="pwd_chk" id = "pwd_chk" onchange="password_check()" required></td>
+                    </tr>
+                    <tr id = "pwd_msg" class = "alert" style= "display:none">
+                        <td></td>
+                        <td>비밀번호가 일치하지 않습니다.</td>
+                    </tr>
+                    <tr>
+                        <td>전화번호</td>
+                        <td><input type="tel" name="phone" required autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td><input type="email" name="email" required autocomplete="off"></td>
+                    </tr>
+                </table>
+                <div id = "submit"><input type="image" src="/static/img/report.png" name="submit" value="submit" align="absmiddle"></div>
+            </form>
+        </div>
     </div>
 </body>
 </html>

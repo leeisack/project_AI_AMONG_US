@@ -10,25 +10,33 @@
     <title>Signup</title>
 </head>
 <body>
-    <a href = "http://127.0.0.1:8000" class = "top_left">
-        <img src="/static/img/cctv.png" id = "character" alt="character">
-        <img src="/static/img/amongus.png" id = "logo" alt="logo">
-    </a>
+    <div class = "top">
+        <div class ="top_left">
+            <div class="character">
+                <img src="/static/img/cctv.png" id = "character" alt="character">
+            </div>
+            <div class="logo">
+                <a href = "http://127.0.0.1:8000/"><img src="/static/img/amongus.png" id = "logo" alt="logo"></a>
+            </div>
+        </div>
+    </div>
     
     <div class = "main">
-        <form method = "POST">
-            <table>
-                <tr>
-                    <td>아이디</td>
-                    <td><input type="text" name="id" required autocomplete="off"></td>
-                </tr>
-                <tr>
-                    <td>비밀번호</td>
-                    <td><input type="password" name="pwd" id = "pwd" required></td>
-                </tr>
-            </table>
-            <div id = "submit"><input type="submit" value = "로그인"></div>
-        </form>
+        <div class = "container">
+            <form method = "POST" class="form">
+                <table>
+                    <tr>
+                        <td>아이디</td>
+                        <td><input type="text" name="id" required autocomplete="off"></td>
+                    </tr>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td><input type="password" name="pwd" id = "pwd" required></td>
+                    </tr>
+                </table>
+                <div class = "submit"><input type="submit" value = "로그인"></div>
+            </form>
+        </div>
     </div>
 </body>
 </html>
